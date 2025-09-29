@@ -25,16 +25,17 @@ git clone https://github.com/drjjwood/MUTscope.git
 cd MUTscope
 ```
 Either
+- Create your environment for  use on **GPU** (recommended)
+```bash
+conda env create -f environment-gpu.yml
+conda activate MUTscope_gpu
+```
+
+or
 - Create your environment for use on **CPU**
 ```bash
 conda env create -f environment-cpu.yml
 conda activate MUTscope_cpu
-```
-or
-- Create your environment for  use on **GPU**
-```bash
-conda env create -f environment-gpu.yml
-conda activate MUTscope_gpu
 ```
 
 Install optional extras if needed;
