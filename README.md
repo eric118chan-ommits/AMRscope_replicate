@@ -11,7 +11,6 @@ MUTscope is a flexible, modular pipeline for training and evaluating machine lea
 * **Flexible Experiment Configuration**: Control every step via changes to single YAML config file
 * **Classifier-Agnostic**: Easily plug in MLP, CNN, or classical models
 * **Lightning Integration**: Built on PyTorch Lightning with support for callbacks, checkpointing, and logging
-* **DeepSpeed Ready**: Efficient large-scale training on HPCs with optional DeepSpeed support
 * **Embedding Cache**: Stores embeddings under the unique target id so they need only be generated once per mutation
 * **Interpretability**: Dimensionality reduction, structural visualization, and DMS simulation
 
@@ -188,6 +187,13 @@ Numerical metrics are logged and also saved as CSV
 * **Dimensionality Reduction**: t-SNE / PCA on latent space
 * **DMS Simulation**: Predict effects of all possible substitutions at each position in a specified gene
 * **3D Structure Mapping**: Map predictions onto protein structures (via Py3Dmol in notebooks)
+* **Antibiotic Resistance Inference**: To infer the likely antbiotic resistance, you can query the mutations used to train the model by gene or organism or both. To do this navigate to AMRscope folder and read the instructions in the amr_db.py. For example the following commands will list all the mutations for the following gene/species:
+```bash
+python amr_db.py query --gene pncA --limit 20
+python amr_db.py query --organism Enterococcus_faecium --limit 20
+python amr_db.py query --gene rpoB --organism Enterococcus_faecium --limit 20
+```
+Alternativley there is a section in the interpretation notebbok for this.
 
 ---
 
