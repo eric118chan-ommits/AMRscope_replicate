@@ -123,9 +123,9 @@ Step 4. (Optional) Use your model to run futher predictions with instructions in
 Each input CSV should contain (at minimum):
 
 * `target_id`: Unique ID - **MUST BE IN FORMAT organism.gene.mutation (e.g.Mycobacterium_tuberculosis.embB.F330V)**
-* `wt`: wt amino acid (e.g. F)
-* `mutation`: mutant amino acid (e.g. V)
-* `position`: position of mutation (e.g. 330)
+* `wt_aa`: wt amino acid (e.g. F)
+* `mt_aa`: mutant amino acid (e.g. V)
+* `aa_index`: position of mutation (e.g. 330)
 * `wt_seq`: Wild-type amino acid sequence
 * `mt_seq`: Mutant sequence (single substitution)
 * `label`: 0/1 binary classification label (not required for prediciton only) 
