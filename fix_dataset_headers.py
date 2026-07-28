@@ -9,7 +9,9 @@ def fix_headers(csv_path):
     rename_map = {
         'wt_sequence': 'wt_seq',
         'mut_sequence': 'mt_seq',
-        'position': 'aa_index'
+        'position': 'aa_index',
+	'wt': 'wt_aa',
+	'mutation': 'mt_aa'
     }
     
     # Only rename if the old columns exist to avoid errors on already-patched files
